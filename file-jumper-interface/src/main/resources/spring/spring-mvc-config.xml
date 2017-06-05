@@ -32,7 +32,7 @@
     <mvc:default-servlet-handler/>
 
     <!-- 静态资源映射 -->
-    <mvc:resources mapping="/**" location="/player/**" />
+    <mvc:resources mapping="/**" location="/filejumper/**" />
 
     <!-- 配置JSP视图解析器 默认的视图解析器 在上边的解析错误时使用 (默认使用html) -->
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"  p:order="1">
@@ -75,5 +75,12 @@
             </list>
         </property>
     </bean>
-
+	
+   <!-- 上传文件的设置 ，maxUploadSize=-1，表示无穷大。uploadTempDir为上传的临时目录 -->  
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"    
+        p:defaultEncoding="UTF-8"    
+        p:maxUploadSize="5400000"    
+        p:uploadTempDir="fileUpload/temp"    
+     />    
+	
 </beans>
