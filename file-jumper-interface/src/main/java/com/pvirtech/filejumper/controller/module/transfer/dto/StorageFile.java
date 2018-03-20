@@ -1,8 +1,7 @@
 package com.pvirtech.filejumper.controller.module.transfer.dto;
 
-import com.richinfo.player.entity.modules.common.bean.BaseBean;
 
-public class StorageFile extends BaseBean {
+public class StorageFile   {
 	/**
 	 * 
 	 */

@@ -1,15 +1,15 @@
 package com.pvirtech.filejumper.controller.common.dto;
 
-import java.util.Date;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.richinfo.player.entity.modules.common.bean.BaseBean;
+
+import java.util.Date;
 
 /**
  *
  * 接口返回结果对象
  *
  */
-public class ResponseResult extends BaseBean{
+public class ResponseResult  {
 
 	/**
 	 * 

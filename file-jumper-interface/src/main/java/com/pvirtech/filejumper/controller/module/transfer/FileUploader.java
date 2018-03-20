@@ -1,27 +1,24 @@
 package com.pvirtech.filejumper.controller.module.transfer;
 
-import java.io.File;
-import java.util.Map;
-import java.util.Date;
-import java.util.UUID;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.net.URLEncoder;
-import java.io.OutputStream;
-import java.io.FileInputStream;
-import javax.servlet.ServletContext;
-import org.apache.commons.io.FileUtils;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import com.pvirtech.filejumper.controller.common.dto.ResponseResult;
 import com.pvirtech.filejumper.controller.common.util.ResultWrapper;
+import com.pvirtech.filejumper.controller.module.transfer.dto.StorageFile;
+import org.apache.commons.io.FileUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import com.pvirtech.filejumper.controller.module.transfer.dto.StorageFile;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.OutputStream;
+import java.net.URLEncoder;
+import java.util.*;
 
 
 @Controller("fileUploader")
